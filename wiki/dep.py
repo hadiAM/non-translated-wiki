@@ -4,10 +4,6 @@ import requests
 import math
 from tqdm import tqdm
 
-
-
-	#urllib.request.urlretrieve("https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-user_groups.sql.gz", "sql/enwiki-latest-user_groups.sql.gz")
-
 d = os.getcwd()+"/sql"
 
 
@@ -40,10 +36,4 @@ def download_file(file):
 	if total_size != 0 and wrote != total_size:
 	    print("ERROR, something went wrong")
 
-	os.system("gunzip " + zfile_path)  
-
-
-
-
-#urllib.request.urlretrieve("https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-user_groups.sql.gz", "sql/enwiki-latest-user_groups.sql.gz")
-
+	os.system("gunzip " + zfile_path)

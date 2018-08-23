@@ -45,11 +45,4 @@ def run():
 
 		if os.path.exists( folder_path ) == True and conn.check_table("langlinks") == True and conn.check_table("langlinks_ar") == False:
 			conn.db_ar_langlinks_table()
-			print('successfully setuped')	
-
-
-	
-	
-	
-	
-	
+			print('successfully setuped')
