@@ -52,3 +52,33 @@ it will create new folder "sql" then it will download two big sql files (1GB+) e
 8- show all titles from wikipedia pages where it has not translated to arabic:
 
     mysql> SELECT CAST(page_title as CHAR) FROM page inner join langlinks_ar ON langlinks_ar.ll_from != page.page_id ;
+
+
+------------------------------------------
+# Notes
+
+
+sudo mysql -u alroot -p
+>use wiki;
+>show tables;
++----------------+
+| Tables_in_wiki |
++----------------+
+| langlinks      |
+| page           |
++----------------+
+>select count(*) from langlinks;
++----------+
+| count(*) |
++----------+
+| 28058897 |
++----------+
+>select count(*) from page;
++----------+
+| count(*) |
++----------+
+| 45476473 |
++----------+
+
+
+

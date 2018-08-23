@@ -64,7 +64,7 @@ class DBConnection(object):
 				return table in i
 		return False
 	def select_titles(self):
-		self.cursor.execute("SELECT CAST(page_title as CHAR) FROM page inner join langlinks_ar ON langlinks_ar.ll_from != page.page_id  ")
+		self.cursor.execute("SELECT CAST(page_title as CHAR) FROM page inner join langlinks_ar ON langlinks_ar.ll_from != page.page_id ")
 
 def main():
 	path = os.getcwd()+'/sql'
@@ -102,13 +102,8 @@ def main():
 		conn = DBConnection()				# |
 		conn.connect()					# |
 		conn.select_titles()				# |
-		i = 0						# |
 		for x in conn.cursor:				# |
 			print(x[0])				# |
-			i += 1					# |
-			if i == 3:				# |
-				break				# |
-		print(db)
 	else:
 		print('[-] Error in command argument')
 

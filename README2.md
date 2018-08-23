@@ -33,7 +33,7 @@ service mysql restart
 
 `python wiki.py download`
 
-4. To parse the database, there is no password (~5 hours):
+4. To parse the database, there is no password (~10 hours):
 
 `python wiki.py parse`
 
